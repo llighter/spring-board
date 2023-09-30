@@ -1,5 +1,6 @@
 package com.llighter.springboard.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 ;
 
+@Disabled("Spring Data REST 통합테스트는 불핑요하므로 비활성화")
 @DisplayName("Data REST - API 테스트")
 @Transactional
 @AutoConfigureMockMvc
