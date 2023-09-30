@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>게시글 페이지</title>
+</head>
+<body class="flex flex-col h-screen">
+<header id="header"></header>
+
+<main class="flex-grow">
+    <div class="container mx-auto mt-5">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-4">
+            <h1 class="text-2xl font-semibold mb-4">첫번째 글</h1>
+            <div class="flex">
+                <section class="w-3/4">
+                    <p class="mb-4">본문</p>
+                    <form class="flex mb-4">
+                        <label for="articleComment" class="sr-only">댓글</label>
+                        <textarea id="articleComment" placeholder="댓글 쓰기.." rows="3" class="w-full border rounded p-2 mr-2"></textarea>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">쓰기</button>
+                    </form>
+                    <ul>
+                        <li class="mb-4">
+                            <div>
+                                <time class="block mb-1"><small>2023-09-30</small></time>
+                                <strong class="block mb-1">llighter</strong>
+                                <p class="mb-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                                    Lorem ipsum dolor sit amet
+                                </p>
+                            </div>
+                        </li>
+                        <li class="mb-4">
+                            <div>
+                                <time class="block mb-1"><small>2023-09-30</small></time>
+                                <strong class="block mb-1">llighter</strong>
+                                <p class="mb-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                                    Lorem ipsum dolor sit amet
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <aside class="w-1/4 ml-4">
+                    <p class="mb-2">llighter</p>
+                    <p class="mb-2"><a href="mailto:hadbsgk@gmail.com">llighter@mail.com</a></p>
+                    <p class="mb-2"><time datetime="2023-09-30T00:00:00">2023-09-30</time></p>
+                    <p class="mb-2">#java</p>
+                </aside>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer id="footer"></footer>
+
+</body>
+</html>

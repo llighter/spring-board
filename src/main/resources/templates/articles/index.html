@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>게시판 페이지</title>
+</head>
+<body class="flex flex-col h-screen">
+<header id="header"></header>
+
+<main class="flex-grow">
+    <div class="container w-full mx-auto mt-5">
+
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-4">
+            <h1 class="text-2xl font-semibold mb-4">게시판</h1>
+            <form class="grid grid-cols-3 gap-4 py-5">
+                <div class="col-span-1">
+                    <label for="search-type" class="sr-only">Search Type</label>
+                    <select id="search-type" name="search-type" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="title">제목</option>
+                        <option value="content">본문</option>
+                        <option value="id">id</option>
+                        <option value="nickname">닉네임</option>
+                        <option value="hashtag">해시태그</option>
+                    </select>
+                </div>
+                <div class="col-span-2">
+                    <label for="search" class="sr-only">Search</label>
+                    <div class="flex items-center">
+                        <input type="text" id="search" class="w-full p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search...">
+                        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Search</button>
+                    </div>
+                </div>
+            </form>
+            <table class="w-full border-collapse border">
+                <thead>
+                <tr>
+                    <th class="p-2 border w-2/5"># 제목</th>
+                    <th class="p-2 border">해시태그</th>
+                    <th class="p-2 border">작성자</th>
+                    <th class="p-2 border">작성일</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="p-2 border"><a href="/articles/1" class="text-blue-500 hover:underline">첫 번째 게시글</a></td>
+                    <td class="p-2 border">#안녕</td>
+                    <td class="p-2 border">llighter</td>
+                    <td class="p-2 border">2023-09-30</td>
+                </tr>
+                <tr>
+                    <td class="p-2 border"><a href="/articles/2" class="text-blue-500 hover:underline">두 번째 게시글</a></td>
+                    <td class="p-2 border">#hello</td>
+                    <td class="p-2 border">llighter</td>
+                    <td class="p-2 border">2023-09-30</td>
+                </tr>
+                <tr>
+                    <td class="p-2 border"><a href="/articles/3" class="text-blue-500 hover:underline">세 번째 게시글</a></td>
+                    <td class="p-2 border">#spring</td>
+                    <td class="p-2 border">llighter</td>
+                    <td class="p-2 border">2023-09-29</td>
+                </tr>
+                </tbody>
+            </table>
+            <nav class="flex items-center justify-center mt-4">
+                <ul class="flex space-x-2">
+                    <li><a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">previous</a></li>
+                    <li><a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">1</a></li>
+                    <li><a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</a></li>
+                    <li><a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">3</a></li>
+                    <li><a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</main>
+
+<footer id="footer"></footer>
+
+</body>
+</html>
